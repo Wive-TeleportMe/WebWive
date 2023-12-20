@@ -6,8 +6,6 @@ import {
 } from "react-router-dom";
 
 import Place from "./pages/Place";
-import Error from "./pages/Error";
-
 
 const router = createBrowserRouter([
 	{
