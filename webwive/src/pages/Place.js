@@ -1,32 +1,43 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet"
 import "leaflet/dist/leaflet.css";
+import {json} from "react-router-dom";
 
 function Place() {
-	const iconPerson = new L.Icon({
-		iconUrl: require("../../public/logo512.png"),
-		iconRetinaUrl: require("../../public/logo512.png"),
-		iconAnchor: null,
-		popupAnchor: null,
-		shadowUrl: null,
-		shadowSize: null,
-		shadowAnchor: null,
-		iconSize: new L.Point(75, 75),
-		className: 'leaflet-div-icon'
-	});
+	const [markers, setMarkers] = useState([]);
+
+	// let url = "http://localhost:3001/cameras";
+	// useEffect(() => {
+	// 	fetch(url)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			const newMarkers = data.map((item) => (
+	// 				<Marker key={item.id} position={[item.latitude, item.longitude]}>
+	// 					<Popup>
+	// 						A pretty CSS3 popup. <br /> Easily customizable.
+	// 					</Popup>
+	// 				</Marker>
+	// 			));
+	// 			setMarkers(newMarkers);
+	// 		})
+	// 		.catch((error) => {
+	// 			console.error("Error:", json(error));
+	// 		});
+	// }, []);
 
 	return (
 		<div>
-			<MapContainer style={{height:"100em"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+			<MapContainer
+				style={{ height: window.innerHeight }}
+				center={[51.505, -0.09]}
+				zoom={13}
+				scrollWheelZoom={false}
+			>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<Marker icon={iconPerson} position={[51.505, -0.09]}>
-					<Popup>
-						A pretty CSS3 popup. <br /> Easily customizable.
-					</Popup>
-				</Marker>
+				{markers}
 			</MapContainer>
 		</div>
 	);
