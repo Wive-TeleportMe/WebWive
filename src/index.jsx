@@ -31,6 +31,7 @@ import {
 
 import Home from "./pages/Home"; // TEMPORAIRE (Normalement, l'application s'ouvre sur la map ou la connexion si pas déjà connecté )
 import Place from "./pages/Place";
+import AddCamera from "./pages/AddCamera";
 import Signin from "./pages/Signin";
 import Login from "./pages/Login";
 // import Error from "./pages/Error";
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 	{
 		path: "/place",
 		element: <Place />,
+	},
+	{
+		path: "/AddCamera",
+		element: <AddCamera />,
 	},
 	{
 		path: "/login",
