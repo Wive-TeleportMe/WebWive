@@ -65,7 +65,7 @@ function Place()
 
 	const navigate = new useNavigate()
 	return (
-		<div>
+		<div id="body">
 
             {/* <div class="searchBar"><input type="text" placeholder="cherchez un lieu" /><img src={wiveCenterWhiteMode} /></div> */}
 
@@ -85,8 +85,8 @@ function Place()
 			<div class="footer">
 				<button class="footerButton" onClick={()=>{navigate('/Place')}} ><img src={homeWhiteModeChecked}/></button>
 				<button class="footerButton" onClick={()=>{navigate('/AddCamera')}} ><img src={plusWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/')}} ><img src={wiveWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/')}} ><img src={heartWhiteMode}/></button>
+				<button class="footerButton" onClick={()=>{navigate('/ChooseCamera')}} ><img src={wiveWhiteMode}/></button>
+				<button class="footerButton" onClick={()=>{navigate('/FavoriteCamera')}} ><img src={heartWhiteMode}/></button>
 			</div>
 		</div>
 	);
