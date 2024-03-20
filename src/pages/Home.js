@@ -2,12 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/Home.css";
 
-function navigateTo(path){
-    console.log("AAAA???")
-    let navigate = new useNavigate()    
-	navigate(path)
-}
-
 function Home()
 {
     const navigate = new useNavigate() 

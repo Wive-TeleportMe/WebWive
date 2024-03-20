@@ -1,7 +1,20 @@
 import React, {useEffect, useState} from "react";
-import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import { useNavigate } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
+import "../css/global.css";
 import {json} from "react-router-dom";
+
+// IMPORT DES IMAGES :
+import homeWhiteMode from "../assets/whiteMode/homeWhiteMode.svg";
+import homeWhiteModeChecked from "../assets/whiteMode/homeWhiteModeChecked.svg";
+import plusWhiteMode from "../assets/whiteMode/plusWhiteMode.svg";
+import plusWhiteModeChecked from "../assets/whiteMode/plusWhiteModeChecked.svg";
+import heartWhiteMode from "../assets/whiteMode/heartWhiteMode.svg";
+import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg";
+import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
+import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
+
 
 function Place()
 {
@@ -51,10 +64,11 @@ function Place()
 
 	scroll()
 
+	const navigate = new useNavigate()
 	return (
 		<div>
 			<MapContainer
-				style={{height: window.innerHeight}}
+				style={{height: (window.innerHeight/100)*91}} // map prend 89% de la page
 				center={[33.53016, -86.85018]}
 				zoom={3}
 				scrollWheelZoom={true}
@@ -65,6 +79,12 @@ function Place()
 				/>
 				{markers}
 			</MapContainer>
+			<div class="footer">
+				<button class="footerButton" onClick={()=>{navigate('/Place')}} ><img src={homeWhiteModeChecked}/></button>
+				<button class="footerButton" onClick={()=>{navigate('/')}} ><img src={plusWhiteMode}/></button>
+				<button class="footerButton" onClick={()=>{navigate('/')}} ><img src={wiveWhiteMode}/></button>
+				<button class="footerButton" onClick={()=>{navigate('/')}} ><img src={heartWhiteMode}/></button>
+			</div>
 		</div>
 	);
 }
