@@ -20,7 +20,7 @@ function FavoriteCamera()
             <table>
                 <tr>
                     <td>Wive!</td>
-                    <td><img src={wiveCenterWhiteMode} /></td>
+                    <td><img src={paramWhiteMode} /></td>
                 </tr>
             </table>
 

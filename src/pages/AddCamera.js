@@ -11,6 +11,7 @@ import heartWhiteMode from "../assets/whiteMode/heartWhiteMode.svg";
 import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg";
 import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
 import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
+import paramWhiteMode from "../assets/whiteMode/paramWhiteMode.svg";
 
 function AddCamera()
 {
@@ -20,7 +21,7 @@ function AddCamera()
             <table>
                 <tr>
                     <td>Wive!</td>
-                    <td><img src={wiveCenterWhiteMode} /></td>
+                    <td><img src={paramWhiteMode} /></td>
                 </tr>
             </table>
 
