@@ -7,8 +7,8 @@ function Place()
 {
 	const [markers, setMarkers] = useState([]);
 	const icon = new L.Icon({
-		iconUrl: require("../../public/location.png"),
-		iconRetinaUrl: require("../../public/location.png"),
+		iconUrl: require("../ressources/location.png"),
+		iconRetinaUrl: require("../ressources/location.png"),
 		iconAnchor: null,
 		popupAnchor: [1, -15],
 		shadowUrl: null,
