@@ -8,7 +8,7 @@ function Home()
 	return (
 		<div id="body">
 
-			<table class="menuNavigate">
+			<table className="menuNavigate">
 				<tr>
 					<td><button onClick={()=>{navigate('/Place')}}>Place</button></td>
 					<td><button onClick={()=>{navigate('/Login')}}>Login</button></td>

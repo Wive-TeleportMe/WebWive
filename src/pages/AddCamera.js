@@ -21,8 +21,8 @@ function AddCamera()
             <div>Veuillez renseigner les informations suivantes afin de pouvoir soumettre votre caméra à Mive</div>
             <br/>
 
-            <div class="textField"><input type="text" placeholder="Nom de votre caméra" /></div>
-            <div class="textField"><input type="text" placeholder="Adresse IP" /></div>
+            <div className="textField"><input type="text" placeholder="Nom de votre caméra" /></div>
+            <div className="textField"><input type="text" placeholder="Adresse IP" /></div>
 
             <div><input type="checkbox" /><span>J’accepte les cgu</span></div>
             <div><input type="checkbox" /><span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span></div>

@@ -17,8 +17,8 @@ function AddCamera()
 
     const [searchParams] = useSearchParams()
     let paramPage = searchParams.get("page")
-    if (paramPage == null ) {
-        paramPage = ''
+    if (paramPage == null || paramPage == '' ) {
+        paramPage = 'Place'
     }
 
     let urlOrigin = window.location.origin
@@ -32,11 +32,11 @@ function AddCamera()
 
             </iframe>
 
-            <div class="footer">
-				<button class="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} ><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} ><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} ><img src={paramPage=='ChooseCamera' ? wiveWhiteMode + wiveCenterWhiteMode : wiveWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} ><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
+            <div className="footer">
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} ><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} ><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} ><img src={paramPage=='ChooseCamera' ? wiveWhiteMode + wiveCenterWhiteMode : wiveWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} ><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
 			</div>
 		</div>
 	);

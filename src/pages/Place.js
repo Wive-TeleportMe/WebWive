@@ -60,10 +60,12 @@ function Place()
 	const navigate = new useNavigate()
 	return (
 		<div id="body">
-
-			<div class="searchBarContainer">
-				<div><img src={wiveLogoTitre} /><img src={paramWhiteMode} /></div>
-				<div class="searchBar"><input type="text" placeholder="cherchez un lieu" /></div>
+			
+			<div className="topShadow"></div>
+			<div className="searchBarContainer">
+				<img src={wiveLogoTitre} />
+				<div id="param" className="paramIcon" onClick={() => document.getElementById("param").classList.toggle("change")}><div className="bar1"></div><div className="bar2"></div><div className="bar3"></div></div>
+				<div className="searchBar"><input type="text" placeholder="cherchez un lieu" /></div>
 			</div>
 
 			<MapContainer

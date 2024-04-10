@@ -52,18 +52,18 @@ function Signin()
 	return (
 		<div id="body">
 
-			<form class="form" action="#" onSubmit={handleSubmit}>
+			<form className="form" action="#" onSubmit={handleSubmit}>
 
-				<h1 class="titreConnexion">Inscription</h1>
+				<h1 className="titreConnexion">Inscription</h1>
 
-				<label id="AAA" for="local_user" class="textfieldLabel">Identifiant :</label>
-				{/* <input type="text" class="textfield" placeholder="Jean.Dupont" onChange={e => setUserName(e.target.value)} required/> */}
-				<input type="text" class="textfield" placeholder="Jean.Dupont" required/>
+				<label id="AAA" for="local_user" className="textfieldLabel">Identifiant :</label>
+				{/* <input type="text" className="textfield" placeholder="Jean.Dupont" onChange={e => setUserName(e.target.value)} required/> */}
+				<input type="text" className="textfield" placeholder="Jean.Dupont" required/>
 				<br/>
 
-				<label class="local_password">Mot de passe :</label>
-				{/* <input type="text" class="textfield" placeholder="*********" onChange={e => setPassword(e.target.value)} required/> */}
-				<input type="text" class="textfield" placeholder="*********" required/>
+				<label className="local_password">Mot de passe :</label>
+				{/* <input type="text" className="textfield" placeholder="*********" onChange={e => setPassword(e.target.value)} required/> */}
+				<input type="text" className="textfield" placeholder="*********" required/>
 				<br/>
 
 				<input type="submit" value="S'inscrire" />
