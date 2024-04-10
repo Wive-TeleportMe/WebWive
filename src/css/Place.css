@@ -1,0 +1,12 @@
+.searchBarContainer{
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.searchBar > input{
+    background: unset;
+    pointer-events: auto;
+}

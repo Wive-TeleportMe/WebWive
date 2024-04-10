@@ -3,17 +3,11 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import { useNavigate, json } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import "../css/global.css";
+import "../css/Place.css";
 
 // IMPORT DES IMAGES :
-import homeWhiteMode from "../assets/whiteMode/homeWhiteMode.svg";
-import homeWhiteModeChecked from "../assets/whiteMode/homeWhiteModeChecked.svg";
-import plusWhiteMode from "../assets/whiteMode/plusWhiteMode.svg";
-import plusWhiteModeChecked from "../assets/whiteMode/plusWhiteModeChecked.svg";
-import heartWhiteMode from "../assets/whiteMode/heartWhiteMode.svg";
-import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg";
-import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
-import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
-
+import wiveLogoTitre from "../assets/whiteMode/wiveLogoTitre.svg";
+import paramWhiteMode from "../assets/whiteMode/paramWhiteMode.svg";
 
 function Place()
 {
@@ -67,10 +61,13 @@ function Place()
 	return (
 		<div id="body">
 
-            {/* <div class="searchBar"><input type="text" placeholder="cherchez un lieu" /><img src={wiveCenterWhiteMode} /></div> */}
+			<div class="searchBarContainer">
+				<div><img src={wiveLogoTitre} /><img src={paramWhiteMode} /></div>
+				<div class="searchBar"><input type="text" placeholder="cherchez un lieu" /></div>
+			</div>
 
 			<MapContainer
-				style={{height: (window.innerHeight/100)*91}} // map prend 89% de la page
+				style={{height: window.innerHeight}} // map prend 89% de la page	(window.innerHeight/100)*91}
 				center={[33.53016, -86.85018]}
 				zoom={3}
 				scrollWheelZoom={true}
@@ -82,12 +79,6 @@ function Place()
 				{markers}
 			</MapContainer>
 
-			<div class="footer">
-				<button class="footerButton" onClick={()=>{navigate('/Place')}} ><img src={homeWhiteModeChecked}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/AddCamera')}} ><img src={plusWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/ChooseCamera')}} ><img src={wiveWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/FavoriteCamera')}} ><img src={heartWhiteMode}/></button>
-			</div>
 		</div>
 	);
 }

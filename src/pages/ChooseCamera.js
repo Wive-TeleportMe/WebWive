@@ -1,16 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/global.css";
+// import "../css/global.css";
 
 // IMPORT DES IMAGES :
-import homeWhiteMode from "../assets/whiteMode/homeWhiteMode.svg";
-import homeWhiteModeChecked from "../assets/whiteMode/homeWhiteModeChecked.svg";
-import plusWhiteMode from "../assets/whiteMode/plusWhiteMode.svg";
-import plusWhiteModeChecked from "../assets/whiteMode/plusWhiteModeChecked.svg";
-import heartWhiteMode from "../assets/whiteMode/heartWhiteMode.svg";
-import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg";
-import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
 import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
+import paramWhiteMode from "../assets/whiteMode/paramWhiteMode.svg";
 
 function ChooseCamera()
 {
@@ -43,12 +37,6 @@ function ChooseCamera()
                 </tr>
             </table>
 
-            <div class="footer">
-				<button class="footerButton" onClick={()=>{navigate('/Place')}} ><img src={homeWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/AddCamera')}} ><img src={plusWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/ChooseCamera')}} ><img src={wiveWhiteMode}/><img src={wiveCenterWhiteMode}/></button>
-				<button class="footerButton" onClick={()=>{navigate('/FavoriteCamera')}} ><img src={heartWhiteMode}/></button>
-			</div>
 		</div>
 	);
 };
