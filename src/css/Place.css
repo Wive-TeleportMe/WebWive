@@ -4,6 +4,7 @@
     width: 100%;
     height: 120px;
     position: absolute;
+    pointer-events: none; /* permet de cliquer sur la map derrière */
 }
 
 .searchBarContainer{
