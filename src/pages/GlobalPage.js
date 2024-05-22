@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import "../css/global.css";
 import "../css/GlobalPage.css";
 
 // IMPORT DES IMAGES :
@@ -37,17 +38,24 @@ function AddCamera()
 			</div>
 
             {/* Menu de paramêtre*/}
-            <div id="menuContainer" className="menuContainer changeMenuContainerFermeture">
+            <div id="menuParamContainer" className="menuParamContainer">
                 <div className="iconContainerSpace"></div>
-                <h3>Menu</h3>
-                <div>Profil</div>
-                <div>Langues</div>
-                <div>Paramètres de confidentialité</div>
-                <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                </label>
-                <div>Mode sombre</div>
+                <h2 className="menuTitre">Menu</h2>
+                <br></br> <br></br> <br></br>
+                <div className="menuBody">
+                    <div>Profil</div><br></br> <br></br>
+                    <div>Langues</div><br></br> <br></br>
+                    <div>Paramètres de confidentialité</div><br></br> <br></br>
+                    
+                    
+                    <div className="darkMode">
+                        <span className="textePetit">Mode sombre</span>
+                        <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
 
             {/* "Ecran" surlequel s'affiche les autres pages */}
@@ -66,16 +74,19 @@ function AddCamera()
 
 
 function toggleMenuParam(){
-    console.log("aaa")
+    
+    // Change l'icone paramêtre en croix et inversement
     let elementParam = document.getElementById("param")
-    if (elementParam != null){
-        elementParam.classList.toggle("change")
+    elementParam.classList.toggle("change")
+    
+    
+    // Ouvre ou ferme le menu de parametre
+    let elementMenuParamContainer = document.getElementById("menuParamContainer")
+    if (elementMenuParamContainer.classList.contains("changeMenuParamContainerOuverture")){
+        elementMenuParamContainer.classList.toggle("changeMenuParamContainerFermeture")
     }
-
-    let elementMenuContainer = document.getElementById("menuContainer")
-    if (elementMenuContainer != null){
-        elementMenuContainer.classList.toggle("changeMenuContainerOuverture")
-        elementMenuContainer.classList.toggle("changeMenuContainerFermeture")
+    else{
+        elementMenuParamContainer.classList.toggle("changeMenuParamContainerOuverture")
     }
 }
 

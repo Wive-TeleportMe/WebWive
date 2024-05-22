@@ -10,7 +10,7 @@ function Home()
 
 			<table className="menuNavigate">
 				<tr>
-					<td><button onClick={()=>{navigate('/Place')}}>Place</button></td>
+					<td><button onClick={()=>{navigate('/globalPage?page=Place')}}>Place</button></td>
 					<td><button onClick={()=>{navigate('/Login')}}>Login</button></td>
 					<td><button onClick={()=>{navigate('/Signin')}}>Signin</button></td>
 				</tr>
