@@ -4,9 +4,46 @@
 }
 
 .menuBody{
-    margin: 40px;
+    margin: 20px;
 }
 
 .textePetit{
     font-size: 10px;
+}
+
+.textField{
+    /* color: black; */
+    width: 100%;
+    height: 28px;
+    padding: 0px 6px 0px 6px;
+    margin: 8px 0px 8px 0px;
+    border-radius: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;  
+}
+.textField:focus{
+    outline: 1px solid #BA30F7;
+    border: 1px solid #BA30F7;
+}
+
+.textButton{
+    position: absolute;
+    right: 50%;
+}
+.textButton > button{
+    right: -50%;
+    position: relative;
+    border: none;
+    border-radius: 100vw;
+    background-color: #4AFC79;
+    width: 51vw;
+    min-width: 100px;
+    max-width: 200px;
+    padding: 0.50em 2em;
+    cursor: pointer;
+    isolation: isolate;
+    overflow: hidden;
+}
+.textButton > button:hover{
+    background-color: rgb(115, 253, 153);
 }

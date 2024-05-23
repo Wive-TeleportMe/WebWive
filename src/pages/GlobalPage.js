@@ -15,7 +15,7 @@ import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg
 import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
 import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
 
-function AddCamera()
+function GlobalPage()
 {
 
     const [searchParams] = useSearchParams()
@@ -42,7 +42,7 @@ function AddCamera()
                 <div className="iconContainerSpace"></div>
                 <h2 className="menuTitre">Menu</h2>
                 <br></br> <br></br> <br></br>
-                <div className="menuBody">
+                <div className="menuBody" style={{margin: "40px"}}>
                     <div>Profil</div><br></br> <br></br>
                     <div>Langues</div><br></br> <br></br>
                     <div>Paramètres de confidentialité</div><br></br> <br></br>
@@ -63,15 +63,19 @@ function AddCamera()
 
             {/* Le pied de page (les boutons pour aller de page en page) */}
             <div className="footer">
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} ><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} ><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} ><img src={paramPage=='ChooseCamera' ? wiveWhiteMode + wiveCenterWhiteMode : wiveWhiteMode}/></button>
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} ><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
+				<button  className="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} id="footerButtonPlace"><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} id="footerButtonAddCamera"><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} id="footerButtonChooseCamera"><img src={paramPage=='ChooseCamera' ? wiveWhiteMode + wiveCenterWhiteMode : wiveWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} id="footerButtonFavoriteCamera"><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
 			</div>
 		</div>
 	);
 };
 
+
+function clickButtonPlace(){
+    document.getElementById("footerButtonPlace").click()
+}
 
 function toggleMenuParam(){
     
@@ -90,4 +94,5 @@ function toggleMenuParam(){
     }
 }
 
-export default AddCamera;
+
+export default GlobalPage;

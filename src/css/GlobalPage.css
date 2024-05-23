@@ -22,7 +22,7 @@ body{
     cursor: pointer;
     pointer-events: auto; /* très important ! */
     position: fixed;
-    right: 7vh;
+    right: 7vw;
     top: 37px;
 }
 .bar1, .bar2, .bar3{

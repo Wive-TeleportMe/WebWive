@@ -1,36 +1,75 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import "../css/global.css";
+import "../css/global.css";
+import GlobalPage from "./GlobalPage";
 
-// IMPORT DES IMAGES :
-import paramWhiteMode from "../assets/whiteMode/paramWhiteMode.svg";
 
 function AddCamera()
 {
     const navigate = new useNavigate() 
 	return (
 		<div id="body">
-            <table>
-                <tr>
-                    <td>Wive!</td>
-                    <td><img src={paramWhiteMode} /></td>
-                </tr>
-            </table>
+            <div className="iconContainerSpace"></div>
 
-            <div>Ajouter une caméra</div>
-            <div>Veuillez renseigner les informations suivantes afin de pouvoir soumettre votre caméra à Mive</div>
-            <br/>
+            {/* 1ere partie : AJOUTER UNE CAMERA */}
+            <div id="part1">
+                <h2 className="menuTitre">Ajouter une caméra</h2>
+                <div className="menuBody">
+                    <p>Veuillez renseigner les informations suivantes afin de pouvoir soumettre votre caméra à Wive</p>
 
-            <div className="textField"><input type="text" placeholder="Nom de votre caméra" /></div>
-            <div className="textField"><input type="text" placeholder="Adresse IP" /></div>
+                    {/* <div className="textField"><input type="text" /><span>Nom de votre caméra</span></div> */}
+                    {/* <div className="textField"><input type="text" /><span>Adresse IP</span></div> */}
+                    <input className="textField" type="text" placeholder="Nom de votre caméra" />
+                    <input className="textField" type="text" placeholder="Adresse IP"/>
+                    <a href="https://google.fr" className="textePetit" style={{float: "right"}}>Comment trouver l'addresse IP ?</a>
 
-            <div><input type="checkbox" /><span>J’accepte les cgu</span></div>
-            <div><input type="checkbox" /><span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span></div>
+                    <br/><br/>
+                    {/* <table><input type="checkbox" /><span>J’accepte les cgu</span></table> */}
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><span>J’accepte les cgu</span></td>
+                        </tr>
+                    </table><br/>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td><span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span></td>
+                        </tr>
+                    </table><br/>
 
-            <button>Valider</button>
+                    <div className="textButton" style={{bottom: "20vw"}}><button onClick={()=>addCameraButton()}>Valider</button></div>
+                </div>
+            </div>
+
+
+            {/* 2eme partie : MERCI POUR VOTRE PROPOSITION ! */}
+            <div id="part2" style={{display: "none"}}>
+                <h2 className="menuTitre">Merci pour votre proposition !</h2>
+                <div className="menuBody">
+                    <p>Votre dossier a bien été envoyé, nous examinons votre proposition.</p>
+                    <p>Nous vous préviendrons par mail de l’état de votre demande</p>
+
+                                                                                            {/* Redirection vers Place. Probablement mal fait, à changer un autre fois */}
+                    <div className="textButton" style={{bottom: "20vw"}}><button onClick={()=>window.location.href = window.location.href.replace("AddCamera", "Place")}>Revenir à l'accueil</button></div>
+                </div>
+            </div>
 
 		</div>
 	);
 };
+
+function addCameraButton(){
+
+    //////
+    // BIDULES POUR AJOUTER UN CAMERA
+    //////
+
+    // Affiche la 2eme partie
+    let elementPart1 = document.getElementById("part1")
+    let elementPart2 = document.getElementById("part2")
+    elementPart1.style.display = "none"
+    elementPart2.style.display = "block"
+}
 
 export default AddCamera;
