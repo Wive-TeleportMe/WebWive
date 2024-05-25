@@ -1,3 +1,13 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
 .menuTitre{
     text-align: center;
     font-size: 26px;
@@ -7,8 +17,60 @@
     margin: 20px;
 }
 
+.titreMoyen{
+    font-size: 16px;
+}
+
 .textePetit{
     font-size: 10px;
+}
+
+.carousel{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
+    overflow: auto;
+    width: 100vw;
+    padding: 0px;
+    margin: 10px 0px 4px 0px;
+}
+.carousel > li{
+    scroll-snap-align: start;
+    list-style-type: none;
+    padding-right: 20px;
+    text-align: center;
+    position: relative;
+}
+.carousel{ /* Cacher scrollbar pour Edge, Firefox et InternetExplorer */
+    -ms-overflow-style: none; /* Edge et InternetExplorer*/
+    scrollbar-width: none; /* Firefox */
+}
+.carousel::-webkit-scrollbar{ /* Cacher scrollbar pour Chrome, Safari et Opera */
+    display: none;
+}
+
+.favoriteCheckbox{
+    display: none;
+}
+.favoriteHeart{
+    content: url(../assets/favoriteHeart.png); /* favoriteHeart */
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 66%;
+}
+.favoriteHeart:hover{
+    content: url(../assets/favoriteHeartFull.png); /* favoriteHeartFull */
+}
+.favoriteCheckbox:checked + label > .favoriteHeart{
+    content: url(../assets/favoriteHeartFullRed.png);
+
+}
+
+.chooseImage{
+    height: 125px;
+    width: 110px;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
 .textField{

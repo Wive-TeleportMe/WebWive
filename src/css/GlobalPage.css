@@ -5,7 +5,7 @@ body{
 }
 
 #iframeShownPage{
-    width: 100%;
+    width: 100%; 
     height: 91vh;
 }
 /* 88.4vh */
@@ -143,4 +143,10 @@ input:checked + .slider:before {
     background-color: white;
     flex-grow: 1;
     flex-basis: calc(100% / 4);
+}
+.footerButton > img{
+    height: 36px;
+    width: 36px;
+    /* border-radius: 15px; */
+    /* object-fit: cover; */
 }

@@ -13,7 +13,7 @@ import plusWhiteModeChecked from "../assets/whiteMode/plusWhiteModeChecked.svg";
 import heartWhiteMode from "../assets/whiteMode/heartWhiteMode.svg";
 import heartWhiteModeChecked from "../assets/whiteMode/heartWhiteModeChecked.svg";
 import wiveWhiteMode from "../assets/whiteMode/wiveWhiteMode.svg";
-import wiveCenterWhiteMode from "../assets/whiteMode/wiveCenterWhiteMode.svg";
+import wiveWhiteModeChecked from "../assets/whiteMode/wiveWhiteModeChecked.svg";
 
 function GlobalPage()
 {
@@ -65,7 +65,7 @@ function GlobalPage()
             <div className="footer">
 				<button  className="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} id="footerButtonPlace"><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
 				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} id="footerButtonAddCamera"><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} id="footerButtonChooseCamera"><img src={paramPage=='ChooseCamera' ? wiveWhiteMode + wiveCenterWhiteMode : wiveWhiteMode}/></button>
+				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} id="footerButtonChooseCamera"><img src={paramPage=='ChooseCamera' ? wiveWhiteModeChecked : wiveWhiteMode}/></button>
 				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} id="footerButtonFavoriteCamera"><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
 			</div>
 		</div>
