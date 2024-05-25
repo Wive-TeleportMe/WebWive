@@ -26,8 +26,8 @@ function GlobalPage()
 
     let urlOrigin = window.location.origin
 
-
-    const navigate = new useNavigate() 
+    const navigate = new useNavigate()
+    
 	return (
 		<div id="body">
 
@@ -43,9 +43,10 @@ function GlobalPage()
                 <h2 className="menuTitre">Menu</h2>
                 <br></br> <br></br> <br></br>
                 <div className="menuBody" style={{margin: "40px"}}>
-                    <div>Profil</div><br></br> <br></br>
-                    <div>Langues</div><br></br> <br></br>
-                    <div>Paramètres de confidentialité</div><br></br> <br></br>
+                    <div className="menuButton">Profil</div><br></br> <br></br>
+                    <div className="menuButton">Langues</div><br></br> <br></br>
+                    <div className="menuButton">Paramètres de confidentialité</div><br></br> <br></br>
+                    <div className="menuButton" onClick={()=>navigate('/')}>Déconnexion</div><br></br> <br></br>
                     
                     
                     <div className="darkMode">

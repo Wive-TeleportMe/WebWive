@@ -71,6 +71,11 @@ body{
     100%    {transform: translate(0, -92vh);}
 }
 
+.menuButton{
+    cursor: pointer;
+    user-select: none;
+}
+
 .darkMode{
     position: absolute;
     bottom: 40px;
