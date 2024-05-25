@@ -22,19 +22,22 @@ function AddCamera()
                     <input className="textField" type="text" placeholder="Nom de votre caméra" />
                     <input className="textField" type="text" placeholder="Adresse IP"/>
                     <a href="https://google.fr" className="textePetit" style={{float: "right"}}>Comment trouver l'addresse IP ?</a>
-
                     <br/><br/>
-                    {/* <table><input type="checkbox" /><span>J’accepte les cgu</span></table> */}
+
                     <table>
                         <tr>
-                            <td><input type="checkbox" /></td>
-                            <td><span>J’accepte les cgu</span></td>
+                            <td><input type="checkbox" id="CB-cgu"/></td>
+                            <td onClick={()=>document.getElementById("CB-cgu").click()} style={{cursor: "pointer"}}>
+                                <span>J’accepte les cgu</span>
+                            </td>
                         </tr>
                     </table><br/>
                     <table>
                         <tr>
-                            <td><input type="checkbox" /></td>
-                            <td><span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span></td>
+                            <td><input type="checkbox" id="CB-refus"/></td>
+                            <td onClick={()=>document.getElementById("CB-refus").click()} style={{cursor: "pointer"}}>
+                                <span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span>
+                            </td>
                         </tr>
                     </table><br/>
 

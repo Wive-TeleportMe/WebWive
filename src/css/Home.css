@@ -1,7 +1,27 @@
-.menuNavigate > tbody > tr > td {
-    background-color: rgb(211, 211, 211);
+.homeButton{
+    text-align: center;
 }
 
-.menuNavigate > tbody > tr > td:hover {
-    background-color: rgb(110, 110, 110);
+.homeButton > button{
+    position: relative;
+    border: 3px solid black;
+    border-radius: 100vw;
+    background-color: white;
+    width: 60vw;
+    min-width: 100px;
+    /* max-width: 200px; */
+    padding: 0.50em 2em;
+    margin-bottom: 15px;
+    cursor: pointer;
+    isolation: isolate;
+    overflow: hidden;
+}
+.homeButton > button:hover{
+    background-color: rgb(230, 230, 230);
+}
+.homeButton > button:active{
+    background-color: rgb(200, 200, 200);
+}
+.homeButton > button:focus{
+    background-color: rgb(200, 200, 200);
 }

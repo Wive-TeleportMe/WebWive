@@ -29,6 +29,7 @@ function FavoriteCamera()
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-1" defaultChecked /><label htmlFor="CB-favorite-1"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={salleDeSport} /><div>Salle de sport</div>
                         </td>
+                        <td style={{width: "20px"}}></td>
                         <td>
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-2" defaultChecked /><label htmlFor="CB-favorite-2"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={parc} /><div>Parc</div>
@@ -39,6 +40,7 @@ function FavoriteCamera()
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-3" defaultChecked /><label htmlFor="CB-favorite-3"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={centreCommercial} /><div>Centre commercial</div>
                         </td>
+                        <td style={{width: "20px"}}></td>
                         <td>
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-4" defaultChecked /><label htmlFor="CB-favorite-4"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={kilimandjaro} /><div>Kilimandjaro</div>
@@ -49,6 +51,7 @@ function FavoriteCamera()
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-5" defaultChecked /><label htmlFor="CB-favorite-5"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={montBlanc} /><div>Mont Blanc</div>
                         </td>
+                        <td style={{width: "20px"}}></td>
                         <td>
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-6" defaultChecked /><label htmlFor="CB-favorite-6"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={plage} /><div>Plage</div>
@@ -59,6 +62,7 @@ function FavoriteCamera()
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-7" defaultChecked /><label htmlFor="CB-favorite-7"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={noImageFound} /><div>Caméra7</div>
                         </td>
+                        <td style={{width: "20px"}}></td>
                         <td>
                             <input type="checkbox" className="favoriteCheckbox" id="CB-favorite-8" defaultChecked /><label htmlFor="CB-favorite-8"><img className="favoriteHeart" /></label>
                             <img className="favoriteCameraImage" src={noImageFound} /><div>Caméra8</div>

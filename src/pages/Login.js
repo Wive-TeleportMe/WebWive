@@ -1,6 +1,10 @@
 import React from "react";
-// import "../../public/css/Login.css";
-// import "../css/Login.css";
+import { useNavigate } from "react-router-dom";
+import "../css/global.css";
+
+// IMPORT DES IMAGES :
+import wiveLogoTitre from "../assets/whiteMode/wiveLogoTitre.svg";
+
 
 
 // async function loginUser(credentials) {
@@ -23,9 +27,9 @@ function Login()
 
 	async function handleSubmit(){ // TEST, A ENLEVER
 
-		document.getElementById("div1").innerHTML = 'HEY'
-		document.getElementById("div2").innerHTML = 'HEY'
-		document.getElementById("div3").innerHTML = 'HEY'		
+		// document.getElementById("div1").innerHTML = 'HEY'
+		// document.getElementById("div2").innerHTML = 'HEY'
+		// document.getElementById("div3").innerHTML = 'HEY'		
 		
 	}
 
@@ -50,32 +54,66 @@ function Login()
 	// 	}
 	// }
 
+	const navigate = new useNavigate()
+
 	return (
+
 		<div id="body">
+			<div className="iconContainer">
+				<img src={wiveLogoTitre} /> 
+			</div>
+			<div className="iconContainerSpace"></div>
 
-			<form className="form" action="#" onSubmit={handleSubmit}>
+            <h2 className="menuTitre">Connexion</h2>
+            <div className="menuBody">
+                <input className="textField" type="text" placeholder="Email" />
+                <input className="textField" type="password" placeholder="Mot de passe"/>
+                <br/><br/>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="CB-cgu"/></td>
+                        <td onClick={()=>document.getElementById("CB-cgu").click()} style={{cursor: "pointer"}}>
+							<span>J’accepte les cgu</span>
+						</td>
+                    </tr>
+                </table><br/>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="CB-refus"/></td>
+                        <td onClick={()=>document.getElementById("CB-refus").click()} style={{cursor: "pointer"}}><span>J’accepte que la proposition soit refusée en cas de non respect de nos conditions</span></td>
+                    </tr>
+                </table>
+				<br/><br/><br/>
 
-				<h1 className="titreConnexion">Connexion</h1>
+        	    <div className="textButton"><button onClick={()=>navigate('/globalPage?page=Place')}>Se connecter</button></div>
+    	    </div>
+        </div>
 
-				<label id="AAA" for="local_user" className="textfieldLabel">Identifiant :</label>
-				{/* <input type="text" className="textfield" placeholder="Jean.Dupont" onChange={e => setUserName(e.target.value)} required/> */}
-				<input type="text" className="textfield" placeholder="Jean.Dupont" required/>
-				<br/>
+		// <div id="body">
 
-				<label className="local_password">Mot de passe :</label>
-				{/* <input type="text" className="textfield" placeholder="*********" onChange={e => setPassword(e.target.value)} required/> */}
-				<input type="text" className="textfield" placeholder="*********" required/>
-				<br/>
+		// 	<form className="form" action="#" onSubmit={handleSubmit}>
 
-				<input type="submit" value="Se connecter" />
-			</form>
+		// 		<h1 className="titreConnexion">Connexion</h1>
 
-			{/* A EFFACER */}
-			<div id="div1"></div>
-			<div id="div2"></div>
-			<div id="div3"></div>
-			{/* A EFFACER */}
-		</div>
+		// 		<label id="AAA" for="local_user" className="textfieldLabel">Identifiant :</label>
+		// 		{/* <input type="text" className="textfield" placeholder="Jean.Dupont" onChange={e => setUserName(e.target.value)} required/> */}
+		// 		<input type="text" className="textfield" placeholder="Jean.Dupont" required/>
+		// 		<br/>
+
+		// 		<label className="local_password">Mot de passe :</label>
+		// 		{/* <input type="text" className="textfield" placeholder="*********" onChange={e => setPassword(e.target.value)} required/> */}
+		// 		<input type="text" className="textfield" placeholder="*********" required/>
+		// 		<br/>
+
+		// 		<input type="submit" value="Se connecter" />
+		// 	</form>
+
+		// 	{/* A EFFACER */}
+		// 	<div id="div1"></div>
+		// 	<div id="div2"></div>
+		// 	<div id="div3"></div>
+		// 	{/* A EFFACER */}
+		// </div>
 	);
 };
 
