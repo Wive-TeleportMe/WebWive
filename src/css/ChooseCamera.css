@@ -1,0 +1,6 @@
+.chooseCameraImage{
+    height: 125px;
+    width: 110px;
+    border-radius: 15px;
+    object-fit: cover;
+}

@@ -1,0 +1,13 @@
+.favoriteCameraTable > tr > td {
+    text-align: center;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.favoriteCameraImage{
+    height: 175px;
+    width: 130px;
+    border-radius: 15px;
+    object-fit: cover;
+}
