@@ -14,7 +14,25 @@
     text-align: center;
     pointer-events: none; /* permet de cliquer sur la map derrière */
 }
-.searchBar > input{
+.searchBar{
     background: unset;
     pointer-events: auto; /* très important ! */
+    padding: 4px 24px 4px 8px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background: url(../assets/whiteMode/loopSearchIcon.png) center right 6px no-repeat;
+}
+.searchBar:focus{
+    outline: 1px solid #BA30F7;
+    border: 1px solid #BA30F7;
+}
+
+
+.visibleSwitchContainer{
+    z-index: 1000;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    display: flex;
+    align-items: center;
 }

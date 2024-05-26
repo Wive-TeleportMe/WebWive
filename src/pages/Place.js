@@ -7,7 +7,7 @@ import "../css/Place.css";
 
 // IMPORT DES IMAGES :
 import wiveLogoTitre from "../assets/whiteMode/wiveLogoTitre.svg";
-import paramWhiteMode from "../assets/whiteMode/paramWhiteMode.svg";
+import loupSearchIcon from "../assets/whiteMode/loopSearchIcon.png";
 
 function Place()
 {
@@ -64,8 +64,16 @@ function Place()
 			<div className="topShadow"></div>
 			<div className="searchBarContainer">
 				<img src={wiveLogoTitre} />
-				<div className="searchBar"><input type="text" placeholder="cherchez un lieu" /></div>
+				<div><input className="searchBar" type="text" placeholder="cherchez un lieu" /></div>
 			</div>
+
+			<div className="visibleSwitchContainer">
+                <span className="smallText">Je souhaite être visible</span>
+                <label className="switch">
+                    <input type="checkbox"/>
+                    <span className="slider"></span>
+                </label>
+            </div>
 
 			<MapContainer
 				style={{height: window.innerHeight}} // map prend 89% de la page	(window.innerHeight/100)*91}

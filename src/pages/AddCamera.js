@@ -21,7 +21,7 @@ function AddCamera()
                     {/* <div className="textField"><input type="text" /><span>Adresse IP</span></div> */}
                     <input className="textField" type="text" placeholder="Nom de votre caméra" />
                     <input className="textField" type="text" placeholder="Adresse IP"/>
-                    <a href="https://google.fr" className="textePetit" style={{float: "right"}}>Comment trouver l'addresse IP ?</a>
+                    <a href="https://google.fr" className="smallText" style={{float: "right"}}>Comment trouver l'addresse IP ?</a>
                     <br/><br/>
 
                     <table>
@@ -41,7 +41,7 @@ function AddCamera()
                         </tr>
                     </table><br/>
 
-                    <div className="textButton" style={{bottom: "20vw"}}><button onClick={()=>addCameraButton()}>Valider</button></div>
+                    <div className="textButton" style={{bottom: "14vh"}}><button onClick={()=>addCameraButton()}>Valider</button></div>
                 </div>
             </div>
 
@@ -49,12 +49,13 @@ function AddCamera()
             {/* 2eme partie : MERCI POUR VOTRE PROPOSITION ! */}
             <div id="part2" style={{display: "none"}}>
                 <h2 className="menuTitre">Merci pour votre proposition !</h2>
+                <br/><br/>
                 <div className="menuBody">
                     <p>Votre dossier a bien été envoyé, nous examinons votre proposition.</p>
                     <p>Nous vous préviendrons par mail de l’état de votre demande</p>
 
                                                                                             {/* Redirection vers Place. Probablement mal fait, à changer un autre fois */}
-                    <div className="textButton" style={{bottom: "20vw"}}><button onClick={()=>window.location.href = window.location.href.replace("AddCamera", "Place")}>Revenir à l'accueil</button></div>
+                    <div className="textButton" style={{bottom: "14vh"}}><button onClick={()=>window.location.href = window.location.href.replace("AddCamera", "Place")}>Revenir à l'accueil</button></div>
                 </div>
             </div>
 

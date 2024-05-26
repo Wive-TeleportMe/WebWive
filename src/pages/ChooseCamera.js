@@ -44,7 +44,7 @@ function ChooseCamera()
                         <img className="chooseCameraImage" src={noImageFound} /><div>Caméra5</div>
                     </li>
                 </ul>
-                <a href="https://google.fr" className="textePetit" style={{float: "right"}}>voir plus</a>
+                <a href="https://google.fr" className="smallText" style={{float: "right"}}>voir plus</a>
                 <br/><br/><br/>
 
                 <div className="titreMoyen">Découvrez les plus beaux paysages</div>
@@ -70,7 +70,7 @@ function ChooseCamera()
                         <img className="chooseCameraImage" src={noImageFound} /><div>Caméra5</div>
                     </li>
                 </ul>
-                <a href="https://google.fr" className="textePetit" style={{float: "right"}}>voir plus</a>
+                <a href="https://google.fr" className="smallText" style={{float: "right"}}>voir plus</a>
             </div>
 
 		</div>

@@ -50,7 +50,7 @@ function GlobalPage()
                     
                     
                     <div className="darkMode">
-                        <span className="textePetit">Mode sombre</span>
+                        <span className="smallText">Mode sombre</span>
                         <label className="switch">
                             <input type="checkbox"/>
                             <span className="slider"></span>
@@ -65,7 +65,9 @@ function GlobalPage()
             {/* Le pied de page (les boutons pour aller de page en page) */}
             <div className="footer">
 				<button  className="footerButton" onClick={()=>{navigate('/globalPage?page=Place')}} id="footerButtonPlace"><img src={paramPage=='Place' ? homeWhiteModeChecked : homeWhiteMode}/></button>
-				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} id="footerButtonAddCamera"><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button>
+                                                                         {/* Normalement "AddCamera", mais "Subscribe" pour la maquette.                 Là aussi */}               
+                <button className="footerButton" onClick={()=>{navigate('/globalPage?page=Subscribe')}} id="footerButtonAddCamera"><img src={paramPage=='Subscribe' ? plusWhiteModeChecked : plusWhiteMode}/></button>
+                {/* <button className="footerButton" onClick={()=>{navigate('/globalPage?page=AddCamera')}} id="footerButtonAddCamera"><img src={paramPage=='AddCamera' ? plusWhiteModeChecked : plusWhiteMode}/></button> */}
 				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=ChooseCamera')}} id="footerButtonChooseCamera"><img src={paramPage=='ChooseCamera' ? wiveWhiteModeChecked : wiveWhiteMode}/></button>
 				<button className="footerButton" onClick={()=>{navigate('/globalPage?page=FavoriteCamera')}} id="footerButtonFavoriteCamera"><img src={paramPage=='FavoriteCamera' ? heartWhiteModeChecked : heartWhiteMode}/></button>
 			</div>

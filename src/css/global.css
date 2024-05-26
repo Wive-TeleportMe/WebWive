@@ -21,10 +21,25 @@ body{
     font-size: 16px;
 }
 
-.textePetit{
+.bigText{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.smallText{
     font-size: 10px;
 }
 
+.screenCenteredText{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+}
+
+
+/* Les images pouvant être "scrollé" de gauche à droite */
 .carousel{
     display: flex;
     scroll-snap-type: x mandatory;
@@ -49,21 +64,24 @@ body{
     display: none;
 }
 
+
+/* Les coeurs pour mettre en favori */
 .favoriteCheckbox{
     display: none;
 }
 .favoriteHeart{
-    content: url(../assets/favoriteHeart.png); /* favoriteHeart */
+    content: url(../assets/favoriteHeart.png);
     position: absolute;
     margin-top: 4%;
     margin-left: 66%;
 }
-.favoriteHeart:hover{
-    content: url(../assets/favoriteHeartFull.png); /* favoriteHeartFull */
+.favoriteHeart:hover{ /* Peut être à enlever */
+    content: url(../assets/favoriteHeartFull.png);
 }
 .favoriteCheckbox:checked + label > .favoriteHeart{
     content: url(../assets/favoriteHeartFullRed.png);
 }
+
 
 .textField{
     /* color: black; */
@@ -86,6 +104,8 @@ body{
     color: black;
 }
 
+
+/* Boutons verts */
 .textButton{
     position: absolute;
     right: 50%;
@@ -99,11 +119,62 @@ body{
     width: 51vw;
     min-width: 100px;
     max-width: 200px;
-    padding: 0.50em 2em;
+    padding: 0.50em 14px;
     cursor: pointer;
     isolation: isolate;
     overflow: hidden;
 }
 .textButton > button:hover{
     background-color: rgb(115, 253, 153);
+}
+
+/* Les toggle switchs */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: inherit;
+    outline: 2px solid black;
+    outline-offset: -8px;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+/* input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+} */
+input:checked + .slider:before {
+    background-color: #4AFC79;
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
