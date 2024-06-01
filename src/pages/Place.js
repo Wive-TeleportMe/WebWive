@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import { useNavigate, json } from "react-router-dom";
+import * as L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "../css/global.css";
 import "../css/Place.css";
@@ -55,7 +56,7 @@ function Place()
 			});
 	}, []);
 
-	scroll()
+	// scroll() // Met une erreur, je sais pas si c'est utile mais ça marche bien sans (Hippolyte)
 
 	const navigate = new useNavigate()
 	return (
