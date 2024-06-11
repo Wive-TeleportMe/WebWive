@@ -25,7 +25,10 @@ function Place()
 		className: 'location-icon'
 	});
 
-	let url = "http://localhost:3001/camerasList?pageSize=1000&page=1";
+	// let url = "http://localhost:3001/camerasList?pageSize=1000&page=1";
+	let url = "http://localhost:3001/camerasList?pageSize=2000&page=37";
+	// let url = "http://localhost:3001/camerasList?pageSize=4000&page=1";
+	
 	useEffect(() =>
 	{
 		fetch(url)
